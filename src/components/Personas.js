@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React  from 'react';
 
 
-class Personas extends Component {
+const Personas= (props) => {
 
-  
-  render() {
-    const {personas } = this.props;
+    const {personas } = props;
 
     const PersonaList = personas.map( p => {
       return (
@@ -23,7 +21,7 @@ class Personas extends Component {
         {PersonaList}          
       </div>
     );
-  }
+  
 }
 
 export default Personas;
