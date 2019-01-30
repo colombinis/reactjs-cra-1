@@ -19,12 +19,22 @@ class App extends Component {
     });
   }
 
+  deletePersona = (id) =>{
+    console.log("deletePersona",id);
+    const newList = this.state.personas.filter(p => {
+      return p.id !== id ;
+    });
+    this.setState({
+      personas: newList
+    })
+  }
+
   render() {
     return (
       <div className="App">
-        <h1>Starting from CRA</h1>
+        <h1>Lista de personas</h1>
          
-        <Personas personas={this.state.personas}  />
+        <Personas personas={this.state.personas}  deletePersona={this.deletePersona} />
         <AddPersona addPersona={this.addPersona}/>
         
       </div>
