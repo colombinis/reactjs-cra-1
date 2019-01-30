@@ -12,13 +12,20 @@ class App extends Component {
     ]
   }
 
+  addPersona = (persona) =>{
+    persona.id= Math.random(); //inject id to the object
+    this.setState({
+      personas: [...this.state.personas, persona]
+    });
+  }
+
   render() {
     return (
       <div className="App">
         <h1>Starting from CRA</h1>
          
         <Personas personas={this.state.personas}  />
-        <AddPersona />
+        <AddPersona addPersona={this.addPersona}/>
         
       </div>
     );
