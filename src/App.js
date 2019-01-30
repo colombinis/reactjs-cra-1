@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Personas from './components/Personas';
+import AddPersona from './components/AddPersona';
 
 
 class App extends Component {
@@ -17,7 +18,7 @@ class App extends Component {
         <h1>Starting from CRA</h1>
          
         <Personas personas={this.state.personas}  />
-        
+        <AddPersona />
         
       </div>
     );
