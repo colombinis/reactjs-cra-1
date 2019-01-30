@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './AddPersona.css';
 
 class AddPersona extends Component {
     state={

@@ -12,6 +12,15 @@ class App extends Component {
     ]
   }
 
+  componentDidMount = () =>{
+    console.log('componentDidMount');
+  }
+
+  componentDidUpdate =(prevProps, prevState)=>{
+    console.log('componentDidUpdate');
+    console.log(prevProps, prevState);
+  }
+
   addPersona = (persona) =>{
     persona.id= Math.random(); //inject id to the object
     this.setState({

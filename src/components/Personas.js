@@ -21,7 +21,7 @@ const Personas= (props) => {
       <div className="personas-list">
         {
            personas.map( p => {
-            return p.profesion == "qa" ? (
+            return p.profesion === "qa" ? (
               <div key={p.id} className="Personas">
                 <h2>Persona</h2>
                 <button onClick={() => {deletePersona(p.id)} }> X </button>
